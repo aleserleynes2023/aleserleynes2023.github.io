@@ -512,7 +512,7 @@
       </div>
       <div class="audio-container">
         <div class="audio-controls">
-          <button class="glow-button" id="listenBtn" onclick="togglePlayPause()">🎧 Listen to My Voice</button>
+          <button class="glow-button" id="listenBtn" onclick="togglePlayPause(voice.mp3)">🎧 Listen to My Voice</button>
         </div>
         <!-- Audio progress bar -->
         <div class="audio-progress" id="audioProgress" onclick="seekAudio(event)">
@@ -672,7 +672,7 @@
         if (audio.ended) {
           audio.currentTime = 0; // Restart the audio
         }
-        audio.play();
+        audio.play(voice.mp3);
         isPlaying = true;
         listenBtn.textContent = "⏸ Pause"; // Change button text to Pause
       }
